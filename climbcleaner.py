@@ -66,23 +66,3 @@ climbs['Avg Stars'].mask(climbs['Avg Stars'] == -1, np.nan, inplace = True)
 
 # Write out the cleaned version of the climbing data so that I have a csv with all of the data in it 
 climbs.to_csv("utah_climbs.csv", index = False)
-
-# This Code Scrapes a list of all of the gyms from mountainproject.com
-url = "https://www.mountainproject.com/gyms/utah"
-r = requests.get(url)
-soup = BeautifulSoup(r.text)
-links = soup.find_all('a')
-
-def hasGym(link):
-    try:
-        if "gym/" in link["href"]:
-            return True
-        else:
-            return False
-    except:
-        return False
-
-gyms = [link.text for link in links if hasGym(link)]
-gyms
-
-
