@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-from bs4 import BeautifulSoup
-import requests
 
 # Creates a list of strings that match the files in the directory
 nums = [str(num) for num in range(1, 9)]
