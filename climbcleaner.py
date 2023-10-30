@@ -61,6 +61,9 @@ for i in ['5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']:
 
 climbs['Rating_num'] = climbs.Rating.replace(ratings).astype(float)
 
+# convert any climbs that had a rating of -1 to NaN values
+climbs['Avg Stars'].mask(climbs['Avg Stars'] == -1, np.nan, inplace = True)
+
 # Write out the cleaned version of the climbing data so that I have a csv with all of the data in it 
 climbs.to_csv("utah_climbs.csv", index = False)
 
