@@ -62,5 +62,40 @@ climbs['Rating_num'] = climbs.Rating.replace(ratings).astype(float)
 # convert any climbs that had a rating of -1 to NaN values
 climbs['Avg Stars'].mask(climbs['Avg Stars'] == -1, np.nan, inplace = True)
 
+# Read in new data scraped from mountainproject.com (scraped using climbscraper.py)
+newData = pd.read_csv('climbs.csv')[['numVotes', 'numViews', 'Year']]
+
+# cleaning the newData from the scraping
+newData["numVotes"] = newData.numVotes.str.extract("(\d+)\n")
+newData[["numViews", "ViewsPerMonth"]] = newData.numViews.str.replace(',', '').str.extract('(\d+) total.{3}(\d+)/month')
+newData[['Shared_by', 'Month', 'Day', 'Year']] = newData.Year.str.extract('Shared By: (.+)on ([JFMASOND][a-z]{2}) (\d{1,2}), (\d{4})')
+newData[['numVotes', 'numViews', 'ViewsPerMonth', 'Day', 'Year']] = newData[['numVotes', 'numViews', 'ViewsPerMonth', 'Day', 'Year']].astype(int)
+
+# Fixing Shared_by to not include a space at the end
+newData.Shared_by = newData.Shared_by.str.strip()
+
+# Changing the months from 3 letters into numbers so that I can make a datetime variable
+month_dict = {
+    'Jan' : 1,
+    'Feb' : 2,
+    'Mar' : 3,
+    'Apr' : 4,
+    'May' : 5,
+    'Jun' : 6,
+    'Jul' : 7,
+    'Aug' : 8,
+    'Sep' : 9,
+    'Oct' : 10,
+    'Nov' : 11,
+    'Dec' : 12
+}
+newData.Month.replace(month_dict, inplace = True)
+
+# Create a datetime variable called "Date" from Year, Month, and Day.
+newData['Date'] = pd.to_datetime(newData[['Year', 'Month', 'Day']])
+
+# Add all of the newData that we scraped to the original Data Frame.
+climbs[['numVotes', 'numViews', 'Year', 'ViewsPerMonth', 'Shared_by', 'Month', 'Day', 'Date']] = newData
+
 # Write out the cleaned version of the climbing data so that I have a csv with all of the data in it 
 climbs.to_csv("utah_climbs.csv", index = False)
