@@ -1,8 +1,5 @@
 import pandas as pd
-from scipy.spatial import cKDTree
 import folium
-import json
-import requests
 from folium.plugins import MarkerCluster
 
 def clus_map(df, lat = 'Latitude', lon = 'Longitude', desc = 'Description', name = 'cluster_map'):
