@@ -19,8 +19,8 @@ def concat(list_of_files, path = ""):
         print("ERROR: 'list_of_files' must be a list")
         return -1
     route_finder_list = [pd.read_csv(path + climb) for climb in list_of_files]
-    climbs = pd.concat(route_finder_list).drop('index', axis = 1).reset_index()
-    return climbs
+    climbs = pd.concat(route_finder_list).reset_index()
+    return climbs.drop('index', axis = 1)
 
 
 def clean(df, inplace = False):
