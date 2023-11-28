@@ -8,7 +8,7 @@ def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
         path_to_data = "data/Utah_Weather_Stations.csv"
     if type == 'raw':
         str_num = [str(i) for i in which]
-        paths = ['data/route-finder_' + num  + '.csv' for num in which]
+        paths = ['data/route-finder_' + num  + '.csv' for num in str_num]
         list = []
         for file in paths:
             data_path = pkg_resources.resource_filename("pyclimb", file)
