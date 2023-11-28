@@ -1,7 +1,7 @@
-beautifulsoup4 @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/beautifulsoup4-split_1699497697084/work
-Bottleneck @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/bottleneck_1699550558423/work
-branca @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/branca_1699498636702/work
-Brotli @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/brotli-split_1699473013692/work
+beautifulsoup4
+Bottleneck
+branca
+Brotli
 certifi @ file:///C:/b/abs_67ivgqu1f0/croot/certifi_1696279429110/work/certifi
 cffi @ file:///C:/b/abs_924gv1kxzj/croot/cffi_1700254355075/work
 charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
