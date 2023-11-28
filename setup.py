@@ -11,7 +11,7 @@ setup(
     description = 'A package to scrape, clean, and vizualize data from mountainproject.com',
     author = 'Hayden Crofts and Riley Wilkinson',
     author_email = 'rileyw@byu.edu',
-    install_requires = parse_requirements('requirements.txt'),
     url = 'https://github.com/quintbro/Climbing_and_Climate',
     packages=find_packages(exclude=['tests', 'Presentation', 'In_Progess_Files']),
+    install_requires = parse_requirements('requirements.txt')
 )
