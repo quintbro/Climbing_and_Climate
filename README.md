@@ -1,2 +1,2 @@
-# Climbing_and_Climate
-This is an analysis of data about rock climbs collected from mountain project and data from the Utah weather stations.
+# PYCLIMB
+This package is used to clean and vizualize data that can be obtained from mountainproject.com.
