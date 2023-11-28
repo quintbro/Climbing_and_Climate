@@ -46,8 +46,8 @@ def scrape_mp(df, crawl_delay = 60, inplace = False):
     >>> from pyclimb.scrape_climbing import scrape_mp
 
     >>> climbs = dataConcat(["route-finder_1.csv", "route-finder_2.csv"])
-    >>> test = scrape_mp(climbs.iloc[:2], crawl_delay = 2)
-    >>> test.info()
+    >>> example = scrape_mp(climbs.iloc[:2], crawl_delay = 60)
+    >>> example.info()
     <class 'pandas.core.frame.DataFrame'>
       RangeIndex: 2 entries, 0 to 1
       Data columns (total 20 columns):
