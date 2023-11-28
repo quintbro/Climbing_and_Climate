@@ -1,6 +1,6 @@
 import pkg_resources
 import pandas as pd
-from clean_climbing import dataConcat
+from pyclimb.clean_climbing import dataConcat
 
 def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
     if type == 'clean':
