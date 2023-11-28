@@ -1,5 +1,6 @@
 import pkg_resources
 import pandas as pd
+from clean_climbing import dataConcat
 
 def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
     if type == 'clean':
@@ -9,11 +10,8 @@ def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
     if type == 'raw':
         str_num = [str(i) for i in which]
         paths = ['data/route-finder_' + num  + '.csv' for num in str_num]
-        list = []
-        for file in paths:
-            data_path = pkg_resources.resource_filename("pyclimb", file)
-            list.append(pd.read_csv(data_path))
-            return list
+        actual_path = [pkg_resources.resource_filename("pyclimb", file) for file in paths]
+        return dataConcat(actual_path)
     
     file_path = pkg_resources.resource_filename("pyclimb", path_to_data)
 
