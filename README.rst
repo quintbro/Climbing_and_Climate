@@ -24,24 +24,20 @@ if you have multiple .csv files the dataConcat function found in the clean_climb
 
 .. code-block:: python
 
-    from pyclimb.clean_climbing import dataConcat
+    import pyclimb as pc
 
     files = ["route-finder_1.csv", "route-finder_2.csv"]
-    climbs = dataConcat(list_of_files = files)
+    climbs = pc.concat(list_of_files = files)
 
 You can then use the dataClean function from the clean_climbing module to clean the data for you.
 
 .. code-block:: python
 
-    from pyclimb.clean_climbing import dataClean
-
-    dataClean(df = climbs, inplace = True)
+    pc.clean(df = climbs, inplace = True)
 
 You can also get additional data by using the scrape_mp function from the scrape_climbing module
 **NOTE:** the crawl delay required by mountain project is 60
 
 .. code-block:: python
 
-    from pyclimb.scrape_climbing import scrape_mp
-
-    new_data = scrape_mp(df = climbs, crawl_delay = 60)
+    new_data = pc.scrape_mp(df = climbs, crawl_delay = 60)
