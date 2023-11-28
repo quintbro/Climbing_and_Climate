@@ -9,6 +9,7 @@ cryptography
 folium
 idna
 Jinja2
+lxml
 MarkupSafe
 numexpr
 numpy
