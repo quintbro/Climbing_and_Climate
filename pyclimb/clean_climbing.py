@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def dataConcat(list_of_files, path = ""):
+def concat(list_of_files, path = ""):
     '''
     This function takes a list of .csv files as an argument and returns a 
     dataframe with the dataframes pulled from each file concatenated together
@@ -23,7 +23,7 @@ def dataConcat(list_of_files, path = ""):
     return climbs
 
 
-def dataClean(df, inplace = False):
+def clean(df, inplace = False):
     '''
     df: This is a pandas data frame that can be obtained by downloading .csv files from 
     mountainproject.com and using the dataConcat function also found in this module
