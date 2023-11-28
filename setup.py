@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 def parse_requirements(filename):
     with open(filename, 'r') as file:
@@ -12,5 +12,6 @@ setup(
     author = 'Hayden Crofts and Riley Wilkinson',
     author_email = 'rileyw@byu.edu',
     install_requires = parse_requirements('requirements.txt'),
-    url = 'https://github.com/quintbro/Climbing_and_Climate'
+    url = 'https://github.com/quintbro/Climbing_and_Climate',
+    packages=find_packages(exclude=['tests', 'Presentation', 'In_Progess_Files']),
 )
