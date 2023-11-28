@@ -10,7 +10,6 @@ folium
 idna
 Jinja2
 MarkupSafe
-mkl-service
 numexpr
 numpy
 pandas
