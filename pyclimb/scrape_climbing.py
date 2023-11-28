@@ -63,7 +63,7 @@ def scrape_mp(df, crawl_delay = 60, inplace = False):
     # cleaning the newData from the scraping
     newData["numVotes"] = newData.numVotes.str.extract("(\d+)\n")
     newData[["numViews", "ViewsPerMonth"]] = newData.numViews.str.replace(',', '').str.extract('(\d+) total.{3}(\d+)/month')
-    newData[['Shared_by', 'Month', 'Day', 'Year']] = newData.Year.str.extract('Shared By: (.+)on ([JFMASOND][a-z]{2}) (\d{1,2}), (\d{4})')
+    newData[['Shared_by', 'Month', 'Day', 'Year']] = newData.Shared_by.str.extract('Shared By: (.+)on ([JFMASOND][a-z]{2}) (\d{1,2}), (\d{4})')
     newData[['numVotes', 'numViews', 'ViewsPerMonth', 'Day', 'Year']] = newData[['numVotes', 'numViews', 'ViewsPerMonth', 'Day', 'Year']].astype(int)
 
     # Fixing Shared_by to not include a space at the end
