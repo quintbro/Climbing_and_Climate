@@ -10,7 +10,7 @@ folium
 idna
 Jinja2
 MarkupSafe
-mkl-service==2.4.0
+mkl-service
 numexpr
 numpy
 pandas
@@ -22,10 +22,10 @@ pytz
 regex
 requests
 scipy
-setuptools==68.0.0
+setuptools
 six
 soupsieve
 tzdata
 urllib3
-wheel==0.41.2
+wheel
 win-inet-pton
