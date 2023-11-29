@@ -10,6 +10,8 @@ Welcome to pyclimb's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   my_markdown
+
 
 
 Indices and tables
