@@ -10,8 +10,7 @@ Welcome to pyclimb's documentation!
    :maxdepth: 3
    :caption: Contents:
 
-   my_markdown
-   ../README
+   README
    modules
 
 

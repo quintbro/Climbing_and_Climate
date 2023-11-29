@@ -3,8 +3,7 @@ import pandas as pd
 from pyclimb.clean_climbing import concat
 
 def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
-    '''
-    This function loads in preloaded datasets
+    '''This function loads in preloaded datasets
 
     Parameters
     ==========

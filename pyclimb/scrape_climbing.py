@@ -20,7 +20,7 @@ def findyear(soup):
 
 
 def scrape_mp(df, crawl_delay = 60, inplace = False):
-    '''
+    '''Function to scrape data from mountainproject.com
     Parameters
     ==========
     df : pandas dataframe
@@ -37,8 +37,8 @@ def scrape_mp(df, crawl_delay = 60, inplace = False):
         Default is False, if set to True, the dataframe that is passed in will 
         be modified
 
-    Description
-    ===========
+    Notes
+    =====
     This Function scrapes data from mountainproject.com, specifically, it creates 8
     different columns namely 'numVotes', 'numViews', 'Year', 'ViewsPerMonth', 
     'Shared_by', 'Month', 'Day', 'Date'
@@ -51,6 +51,7 @@ def scrape_mp(df, crawl_delay = 60, inplace = False):
     >>> climbs = dataConcat(["route-finder_1.csv", "route-finder_2.csv"])
     >>> example = scrape_mp(climbs.iloc[:2], crawl_delay = 60)
     >>> example.info()
+
     <class 'pandas.core.frame.DataFrame'>
       RangeIndex: 2 entries, 0 to 1
       Data columns (total 20 columns):
