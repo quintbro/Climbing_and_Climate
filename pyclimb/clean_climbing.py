@@ -62,11 +62,11 @@ def clean(df, inplace = False):
         '.2', '.3', '.3', '.4', '.5', '.5', '.6', '.7', '.7', '.8' respectively
         and the first number remains the same and the 5 is dropped.
 
-    NOTE: This does not create anything for boulder or ice/mixed or any other rating system
-    it only uses the YSD
+        NOTE: This does not create anything for boulder or ice/mixed or any other rating system
+        it only uses the YSD
 
-    Lastly this function will convert any values that are -1 in the Rating column 
-    to np.NaN values
+        Lastly this function will convert any values that are -1 in the Rating column 
+        to np.NaN values
     '''
     if isinstance(df, pd.DataFrame):
         isdf = True
