@@ -21,6 +21,7 @@ def findyear(soup):
 
 def scrape_mp(df, crawl_delay = 60, inplace = False):
     '''Function to scrape data from mountainproject.com
+    
     Parameters
     ==========
     df : pandas dataframe
@@ -45,14 +46,16 @@ def scrape_mp(df, crawl_delay = 60, inplace = False):
 
     Example
     =======
+
     >>> from pyclimb.clean_climbing import dataConcat
     >>> from pyclimb.scrape_climbing import scrape_mp
 
     >>> climbs = dataConcat(["route-finder_1.csv", "route-finder_2.csv"])
     >>> example = scrape_mp(climbs.iloc[:2], crawl_delay = 60)
     >>> example.info()
+
     '''
-    
+
     if inplace == False:
         climbs = df.copy()
     else:

@@ -3,6 +3,7 @@ import numpy as np
 
 def concat(list_of_files, path = ""):
     '''
+    
     This function takes a list of .csv files as an argument and returns a 
     dataframe with the dataframes pulled from each file concatenated together
     vertically
