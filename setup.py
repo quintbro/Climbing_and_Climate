@@ -12,7 +12,7 @@ setup(
     author = 'Hayden Crofts and Riley Wilkinson',
     author_email = 'rileyw@byu.edu',
     url = 'https://github.com/quintbro/Climbing_and_Climate',
-    packages=find_packages(exclude=['tests', 'Presentation', 'In_Progess_Files']),
+    packages=find_packages(exclude=['tests', 'Presentation', 'In_Progess_Files', 'docs']),
     package_data = {'pyclimb': ['data/*.csv']},
     install_requires = parse_requirements('requirements.txt')
 )
