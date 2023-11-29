@@ -7,7 +7,7 @@ Welcome to pyclimb's documentation!
 ===================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    my_markdown
