@@ -7,41 +7,44 @@ import time
 
 # These are helper functions and do not need to be accessed
 def findviews(soup):
-  list = [thing.get_text().strip() for thing in soup.findAll('tr')]
-  for i in list:
-    if re.match('Page Views', i):
-      return re.sub('\s+', ' ', i)
+    list = [thing.get_text().strip() for thing in soup.findAll('tr')]
+    for i in list:
+        if re.match('Page Views', i):
+            return re.sub('\s+', ' ', i)
     
 def findyear(soup):
-  list = [thing.get_text().strip() for thing in soup.findAll('tr')]
-  for i in list:
-    if re.match('Shared By', i):
-      return re.sub('\s+', ' ', i)
+    list = [thing.get_text().strip() for thing in soup.findAll('tr')]
+    for i in list:
+        if re.match('Shared By', i):
+            return re.sub('\s+', ' ', i)
 
 
 def scrape_mp(df, crawl_delay = 60, inplace = False):
     '''
     Parameters
-    ============
-    df : This should be a dataframe with a column that includes URLs to specific
-    climbs from mountainproject.com. This can be obtained by going to "route finder" on
-    mountain project and exporting a csv file of the climbs you select
+    ==========
+    df : pandas dataframe
+        This should be a dataframe with a column that includes URLs to specific
+        climbs from mountainproject.com. This can be obtained by going to "route finder" on
+        mountain project and exporting a csv file of the climbs you select
 
-    crawl_delay : This is the amount of delay between each time the scraper makes a request
-    the default is 60 seconds because that that is what robots.txt on mountainproject.com 
-    requires
+    crawl_delay : int
+        This is the amount of delay between each time the scraper makes a request
+        the default is 60 seconds because that that is what robots.txt on mountainproject.com 
+        requires
 
-    inplace : Default is False, if set to True, the dataframe that is passed in will 
-    be modified
+    inplace : boolean
+        Default is False, if set to True, the dataframe that is passed in will 
+        be modified
 
     Description
-    =============
+    ===========
     This Function scrapes data from mountainproject.com, specifically, it creates 8
     different columns namely 'numVotes', 'numViews', 'Year', 'ViewsPerMonth', 
     'Shared_by', 'Month', 'Day', 'Date'
 
     Example
-    ============
+    =======
     >>> from pyclimb.clean_climbing import dataConcat
     >>> from pyclimb.scrape_climbing import scrape_mp
 

@@ -25,11 +25,17 @@ def concat(list_of_files, path = ""):
 
 def clean(df, inplace = False):
     '''
-    df: This is a pandas data frame that can be obtained by downloading .csv files from 
-    mountainproject.com and using the dataConcat function also found in this module
-    inplace: setting this equal to true will change the data frame that you pass in.
-    setting equal to false will return a modified copy
+    Parameters
+    ==========
+    df: pandas dataframe
+        This is a pandas data frame that can be obtained by downloading .csv files from 
+        mountainproject.com and using the dataConcat function also found in this module
+    inplace: boolean
+        setting this equal to true will change the data frame that you pass in.
+        setting equal to false will return a modified copy
 
+    What it will change
+    ===================
     This function will return a cleaned pd.dataframe object as follows:
 
     This function will change "Rating" into two boolean factors, one for PG13 and one for R
