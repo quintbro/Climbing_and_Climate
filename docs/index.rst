@@ -12,6 +12,7 @@ Welcome to pyclimb's documentation!
 
    my_markdown
    README
+   modules
 
 
 
