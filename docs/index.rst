@@ -5,12 +5,15 @@
 
 Welcome to pyclimb's documentation!
 ===================================
+.. toctree::
+   :hidden:
+
+   self
 
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
 
-   index
    README
    modules
 
