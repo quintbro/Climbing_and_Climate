@@ -11,6 +11,7 @@ Welcome to pyclimb's documentation!
    :caption: Contents:
 
    my_markdown
+   README
 
 
 
