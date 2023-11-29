@@ -7,10 +7,20 @@ def concat(list_of_files, path = ""):
     dataframe with the dataframes pulled from each file concatenated together
     vertically
 
-    There is an optional path argument which specifies the path if the data is not located 
-    in the same directory as your script. if path is specified, inlude a '/' at the end of the script
-    for example path = "data/" if the .csv files are located in a directory called "data" within
-    your environment.
+    Parameters
+    ==========
+    list_of_files : list of strings
+        The names of the files that you want to be concatentated together
+    path : string
+        There is an optional path argument which specifies the path if the data is not located 
+        in the same directory as your script. if path is specified, inlude a '/' at the end of the script
+        for example path = "data/" if the .csv files are located in a directory called "data" within
+        your environment.
+
+    Returns
+    =======
+    pandas dataframe
+        A concatenated dataframe of the files that you specify in the list_of_files arguement
     '''
 
     if isinstance(list_of_files, list):
@@ -34,22 +44,23 @@ def clean(df, inplace = False):
         setting this equal to true will change the data frame that you pass in.
         setting equal to false will return a modified copy
 
-    What it will change
-    ===================
-    This function will return a cleaned pd.dataframe object as follows:
+    Returns
+    =======
+    pandas dataframe
+        A cleaned pd.dataframe object as follows:
 
-    This function will change "Rating" into two boolean factors, one for PG13 and one for R
-    It will separate the Location column into 5 different columns called 
-    "State", "Region", "Location", "Crag", and "Wall"
+        This function will change "Rating" into two boolean factors, one for PG13 and one for R
+        It will separate the Location column into 5 different columns called 
+        "State", "Region", "Location", "Crag", and "Wall"
 
-    it will change "Route Type" into separate boolean columns for each type namely
-    'Trad', 'Alpine', 'TR', 'Aid', 'Boulder', 'Mixed' and 'Sport'
+        it will change "Route Type" into separate boolean columns for each type namely
+        'Trad', 'Alpine', 'TR', 'Aid', 'Boulder', 'Mixed' and 'Sport'
 
-    Creates an encoding for the YSD ratings called Rating_num
-    The encoding is as follows:
-    'a', 'a/b', '-', 'b', 'b/c', '', 'c', 'c/d', '+', 'd' are mapped to 
-    '.2', '.3', '.3', '.4', '.5', '.5', '.6', '.7', '.7', '.8' respectively
-    and the first number remains the same and the 5 is dropped.
+        Creates an encoding for the YSD ratings called Rating_num
+        The encoding is as follows:
+        'a', 'a/b', '-', 'b', 'b/c', '', 'c', 'c/d', '+', 'd' are mapped to 
+        '.2', '.3', '.3', '.4', '.5', '.5', '.6', '.7', '.7', '.8' respectively
+        and the first number remains the same and the 5 is dropped.
 
     NOTE: This does not create anything for boulder or ice/mixed or any other rating system
     it only uses the YSD
