@@ -51,35 +51,8 @@ def scrape_mp(df, crawl_delay = 60, inplace = False):
     >>> climbs = dataConcat(["route-finder_1.csv", "route-finder_2.csv"])
     >>> example = scrape_mp(climbs.iloc[:2], crawl_delay = 60)
     >>> example.info()
-
-    <class 'pandas.core.frame.DataFrame'>
-      RangeIndex: 2 entries, 0 to 1
-      Data columns (total 20 columns):
-      #   Column          Non-Null Count  Dtype         
-      ---  ------          --------------  -----         
-      0   index           2 non-null      int64         
-      1   Route           2 non-null      object        
-      2   Location        2 non-null      object        
-      3   URL             2 non-null      object        
-      4   Avg Stars       2 non-null      float64       
-      5   Your Stars      2 non-null      int64         
-      6   Route Type      2 non-null      object        
-      7   Rating          2 non-null      object        
-      8   Pitches         2 non-null      int64         
-      9   Length          2 non-null      float64       
-      10  Area Latitude   2 non-null      float64       
-      11  Area Longitude  2 non-null      float64       
-      12  numVotes        2 non-null      int32         
-      13  numViews        2 non-null      int32         
-      14  Year            2 non-null      object        
-      15  ViewsPerMonth   2 non-null      int32         
-      16  Shared_by       2 non-null      int64         
-      17  Month           2 non-null      int32         
-      18  Day             2 non-null      int32         
-      19  Date            2 non-null      datetime64[ns]
-      dtypes: datetime64[ns](1), float64(4), int32(5), int64(4), object(6)
-      memory usage: 412.0+ bytes
     '''
+    
     if inplace == False:
         climbs = df.copy()
     else:
