@@ -8,9 +8,13 @@ def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
     Parameters
     ==========
     type : string
-        Options are 'clean', 'raw', or 'weather' *'clean'* - this is a data set of all of the outdoor sport climbs in Utah from the 
-        mountain project database as of October 2023 *'raw'* - this is the files that the 'clean' data came from, there are 8 different files the default is to return a single data frame with all 8 files, but you can 
-        request  any one of the files by specifying the argument which *'weather'* this is climate data taken from Utah Weather Stations
+        Options : 'clean', 'raw', or 'weather' 
+            *'clean' - this is a data set of all of the outdoor sport climbs in Utah from the 
+                mountain project database as of October 2023 
+            *'raw' - this is the files that the 'clean' data came from, there are 8 different files the 
+                default is to return a single data frame with all 8 files, but you can request  any one 
+                of the files by specifying the argument which 
+            *'weather' this is climate data taken from Utah Weather Stations
 
     which : list of ints (1-8)
         This arguement specifies which of the data files you want if you select the 'raw' option.
