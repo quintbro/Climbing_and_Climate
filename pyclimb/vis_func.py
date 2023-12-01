@@ -4,6 +4,47 @@ from folium.plugins import MarkerCluster
 
 
 def clus_map(df, lat = 'Latitude', lon = 'Longitude', desc = 'Description', name = 'cluster_map', save = True):
+    '''Create an interactive map of climbs with the desired description/attribute
+
+    Parameters
+    ==========
+    df : pandas dataframe
+        The Dataframe must include a latitude and longitude column
+
+    lat : str, default = "Latitude"
+        This is the name of the column in df that contains the latitude
+    
+    lon : str, default = "Longitude"
+        This is the name of the column in df that contains the longitude
+    
+    desc : str, default = "Description"
+        This is the name of the column in df that you want each point on the graph to display
+        You can also think of this as an attribute
+
+    name : str, default = "cluster_map"
+        This is the name of the html file that you want to write the map out to
+
+    save : boolean, default = True
+        When set to True, it will write out the map to an html file, when set to False,
+        the function will return the map as a folium map object
+
+    Returns
+    =======
+    folium map object
+
+    Notes
+    =====
+    By default the function will return nothing, if you set save = False, it will return a folium map object
+
+    Example
+    =======
+    This example uses the data that can be loaded using the load_data function and 
+
+    >>> import pyclimb as pc
+    >>> from pyclimb.vis_func import clus_map
+    >>> clus_map(pc.load_data("clean"), lat = "Area Latitude", lon = "Area Longitude", desc = "Route")
+    
+    '''
     # Rename the df to correct column names
     df = df.rename(columns={lat: 'Latitude', lon: 'Longitude', desc: 'Description'})
     
