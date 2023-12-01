@@ -18,7 +18,7 @@ PYCLIMB Docs Homepage
    :caption: Contents:
 
    README
-   modules
+   pyclimb
 
 
 
