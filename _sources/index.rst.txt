@@ -21,7 +21,6 @@ PYCLIMB Docs Homepage
    pyclimb
 
 
-
 Indices and tables
 ==================
 
