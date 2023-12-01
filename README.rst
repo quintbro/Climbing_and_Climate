@@ -4,6 +4,7 @@ This package is used to clean and vizualize data that can be obtained from mount
 
 Documentation
 -------------
+To read the documentation please visit `<https://quintbro.github.io/Climbing_and_Climate/>`_
 
 Installation
 ------------
