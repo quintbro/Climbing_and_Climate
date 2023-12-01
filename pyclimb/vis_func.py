@@ -2,7 +2,8 @@ import pandas as pd
 import folium
 from folium.plugins import MarkerCluster
 
-def clus_map(df, lat = 'Latitude', lon = 'Longitude', desc = 'Description', name = 'cluster_map'):
+
+def clus_map(df, lat = 'Latitude', lon = 'Longitude', desc = 'Description', name = 'cluster_map', save = True):
     # Rename the df to correct column names
     df = df.rename(columns={lat: 'Latitude', lon: 'Longitude', desc: 'Description'})
     
@@ -17,4 +18,8 @@ def clus_map(df, lat = 'Latitude', lon = 'Longitude', desc = 'Description', name
         folium.Marker([row['Latitude'], row['Longitude']], popup=row['Description'], icon=folium.Icon(prefix='fa', icon='star')).add_to(marker_cluster)
 
     # Save the map as an HTML file
-    map.save(f'{name}.html')
+    if save:
+        map.save(f'{name}.html')
+    else:
+        return map
+    
