@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -192,7 +192,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -200,6 +200,41 @@
         <article role="main">
           <section id="pyclimb-docs-homepage">
 <h1>PYCLIMB Docs Homepage<a class="headerlink" href="#pyclimb-docs-homepage" title="Link to this heading">#</a></h1>
+</section>
+<section id="pyclimb">
+<h1>PYCLIMB<a class="headerlink" href="#pyclimb" title="Link to this heading">#</a></h1>
+<p>This package is used to clean and vizualize data that can be obtained from mountainproject.com.</p>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<p>Use the package manager <cite>pip</cite> to install pyclimb.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/quintbro/Climbing_and_Climate.git
+</pre></div>
+</div>
+<p>In order to obtain the .csv files that work with this package go to the <cite>mountain project route finder &lt;https://www.mountainproject.com/route-finder&gt;</cite> and filter to the desired routes that you want data on. then hit “export csv” which will download the .csv file that will work with all of the functions in this package.
+<strong>NOTE:</strong> the route finder will only export 1000 climbs at a time, so if you want export more climbs than that you will need to export multiple .csv files then use the dataConcat function to concatenate all of them into a single dataframe.</p>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<p>Here is a demo of how to use the package:</p>
+<p>if you have multiple .csv files the dataConcat function found in the clean_climbing module will concatenate them together for you.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyclimb</span> <span class="k">as</span> <span class="nn">pc</span>
+
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;route-finder_1.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;route-finder_2.csv&quot;</span><span class="p">]</span>
+<span class="n">climbs</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_of_files</span> <span class="o">=</span> <span class="n">files</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can then use the dataClean function from the clean_climbing module to clean the data for you.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pc</span><span class="o">.</span><span class="n">clean</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">climbs</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also get additional data by using the scrape_mp function from the scrape_climbing module
+<strong>NOTE:</strong> the crawl delay required by mountain project is 60</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">scrape_mp</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">climbs</span><span class="p">,</span> <span class="n">crawl_delay</span> <span class="o">=</span> <span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -225,6 +260,7 @@
 </li>
 </ul>
 </div>
+</section>
 </section>
 <section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">#</a></h1>
@@ -268,27 +304,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">PYCLIMB Docs Homepage</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

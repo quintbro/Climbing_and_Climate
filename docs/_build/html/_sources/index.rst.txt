@@ -5,6 +5,9 @@
 
 PYCLIMB Docs Homepage
 =====================
+
+.. include:: ../README.rst
+
 .. toctree::
    :hidden:
 
