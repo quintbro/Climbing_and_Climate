@@ -2,19 +2,34 @@ import pandas as pd
 from scipy.spatial import cKDTree
 
 def merge_data_dist(df1, df2, keep_col, lat = 'Latitude', lon = 'Longitude'):
-    '''
-    df1: Left data frame that you want to join 
-    NOTE: this will perform a left join, meaning that all of the columns in df1 will
+    ''' Function to merge a dataframe containing latitude and longitude with 
+    the climbing dataframe
+    
+    Parameters
+    ==========
+    df1 : Pandas dataframe
+        Left dataframe that you want to join. All rows will be kept
+
+    df2 : Pandas dataframe
+        Right dataframe that you want to join. Not all of the rows in this dataframe will
+        necessarily be joined with df1.
+    
+    keep_col : str
+        name of the column from df2 that you want to join to df1
+
+    lat : str, default = "Latitude"
+        the name of the latitude column in df2
+    
+    lon : str, default = "Longitude"
+        The name of the longitude column in df2
+    
+    Notes
+    =====
+    1. this will perform a left join, meaning that all of the columns in df1 will
     be kept but not all of the columns in df2 will necessarily be kept
 
-    df2: Right data frame that you want to join
-    
-    keep_col: name of the column from df2 that you want to join to df1
-
-    lat and lon: the name of the latitude and longitude column for df2
-    NOTE: This assumes that df1 has column names "Latitude" and "Longitude"
-    respectively. Otherwise, the name of those columns must be the same names as
-    df2 which is specified by the lat and lon arguements
+    2. This assumes that df1 has column names "Latitude" and "Longitude". Otherwise, the name of those columns 
+    *must* be the same names as df2 which is specified by the lat and lon arguements
     '''
     # Rename the df to correct column names
     df1 = df1.rename(columns={lat: 'Latitude', lon: 'Longitude'})

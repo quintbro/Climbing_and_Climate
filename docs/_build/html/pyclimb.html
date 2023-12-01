@@ -1,0 +1,473 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="pyclimb" href="modules.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>pyclimb package - pyclimb 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">pyclimb 0.0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">pyclimb 0.0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">PYCLIMB Docs Homepage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Intro to PYCLIMB</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">pyclimb</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of pyclimb</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">pyclimb package</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="pyclimb-package">
+<h1>pyclimb package<a class="headerlink" href="#pyclimb-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-pyclimb.clean_climbing">
+<span id="pyclimb-clean-climbing-module"></span><h2>pyclimb.clean_climbing module<a class="headerlink" href="#module-pyclimb.clean_climbing" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.clean_climbing.clean">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.clean_climbing.</span></span><span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.clean_climbing.clean" title="Link to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – This is a pandas data frame that can be obtained by downloading .csv files from
+mountainproject.com and using the dataConcat function also found in this module</p></li>
+<li><p><strong>inplace</strong> (<em>boolean</em>) – setting this equal to true will change the data frame that you pass in.
+setting equal to false will return a modified copy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A cleaned pd.dataframe object as follows:</p>
+<p>This function will change “Rating” into two boolean factors, one for PG13 and one for R
+It will separate the Location column into 5 different columns called
+“State”, “Region”, “Location”, “Crag”, and “Wall”</p>
+<p>it will change “Route Type” into separate boolean columns for each type namely
+‘Trad’, ‘Alpine’, ‘TR’, ‘Aid’, ‘Boulder’, ‘Mixed’ and ‘Sport’</p>
+<p>Creates an encoding for the YSD ratings called Rating_num
+The encoding is as follows:
+‘a’, ‘a/b’, ‘-’, ‘b’, ‘b/c’, ‘’, ‘c’, ‘c/d’, ‘+’, ‘d’ are mapped to
+‘.2’, ‘.3’, ‘.3’, ‘.4’, ‘.5’, ‘.5’, ‘.6’, ‘.7’, ‘.7’, ‘.8’ respectively
+and the first number remains the same and the 5 is dropped.</p>
+<p>NOTE: This does not create anything for boulder or ice/mixed or any other rating system
+it only uses the YSD</p>
+<p>Lastly this function will convert any values that are -1 in the Rating column
+to np.NaN values</p>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.clean_climbing.concat">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.clean_climbing.</span></span><span class="sig-name descname"><span class="pre">concat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.clean_climbing.concat" title="Link to this definition">#</a></dt>
+<dd><p>This function takes a list of .csv files as an argument and returns a
+dataframe with the dataframes pulled from each file concatenated together
+vertically</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list_of_files</strong> (<em>list</em><em> of </em><em>strings</em>) – The names of the files that you want to be concatentated together</p></li>
+<li><p><strong>path</strong> (<em>string</em>) – There is an optional path argument which specifies the path if the data is not located
+in the same directory as your script. if path is specified, inlude a ‘/’ at the end of the script
+for example path = “data/” if the .csv files are located in a directory called “data” within
+your environment.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A concatenated dataframe of the files that you specify in the list_of_files arguement</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pyclimb.load_data">
+<span id="pyclimb-load-data-module"></span><h2>pyclimb.load_data module<a class="headerlink" href="#module-pyclimb.load_data" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.load_data.load_data">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.load_data.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'clean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">which</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.load_data.load_data" title="Link to this definition">#</a></dt>
+<dd><p>This function loads in preloaded datasets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>{'clean'</em><em>, </em><em>'raw'</em><em>, </em><em>'weather'}</em><em>, </em><em>default = &quot;clean&quot;</em>) – <dl class="simple">
+<dt>Options :</dt><dd><dl class="simple">
+<dt>-‘clean’ :</dt><dd><p>this is a data set of all of the outdoor sport climbs in Utah from the
+mountain project database as of October 2023</p>
+</dd>
+<dt>-‘raw’ :</dt><dd><p>this is the files that the ‘clean’ data came from, there are 8 different files the
+default is to return a single data frame with all 8 files, but you can request  any one
+of the files by specifying the argument which</p>
+</dd>
+<dt>-‘weather’ :</dt><dd><p>this is climate data taken from Utah Weather Stations</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>which</strong> (<em>list</em><em> of </em><em>ints</em><em> (</em><em>1-8</em><em>)</em>) – This arguement specifies which of the data files you want if you select the ‘raw’ option.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the data set requested</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pyclimb.scrape_climbing">
+<span id="pyclimb-scrape-climbing-module"></span><h2>pyclimb.scrape_climbing module<a class="headerlink" href="#module-pyclimb.scrape_climbing" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.scrape_climbing.findviews">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">findviews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.scrape_climbing.findviews" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.scrape_climbing.findyear">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">findyear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.scrape_climbing.findyear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.scrape_climbing.scrape_mp">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">scrape_mp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crawl_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.scrape_climbing.scrape_mp" title="Link to this definition">#</a></dt>
+<dd><p>Function to scrape data from mountainproject.com</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – This should be a dataframe with a column that includes URLs to specific
+climbs from mountainproject.com. This can be obtained by going to “route finder” on
+mountain project and exporting a csv file of the climbs you select</p></li>
+<li><p><strong>crawl_delay</strong> (<em>int</em>) – This is the amount of delay between each time the scraper makes a request
+the default is 60 seconds because that that is what robots.txt on mountainproject.com
+requires</p></li>
+<li><p><strong>inplace</strong> (<em>boolean</em>) – Default is False, if set to True, the dataframe that is passed in will
+be modified</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This Function scrapes data from mountainproject.com, specifically, it creates 8
+different columns namely ‘numVotes’, ‘numViews’, ‘Year’, ‘ViewsPerMonth’,
+‘Shared_by’, ‘Month’, ‘Day’, ‘Date’</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyclimb.clean_climbing</span> <span class="kn">import</span> <span class="n">dataConcat</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyclimb.scrape_climbing</span> <span class="kn">import</span> <span class="n">scrape_mp</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">climbs</span> <span class="o">=</span> <span class="n">dataConcat</span><span class="p">([</span><span class="s2">&quot;route-finder_1.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;route-finder_2.csv&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span> <span class="o">=</span> <span class="n">scrape_mp</span><span class="p">(</span><span class="n">climbs</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="n">crawl_delay</span> <span class="o">=</span> <span class="mi">60</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-pyclimb.temp_merge_file">
+<span id="pyclimb-temp-merge-file-module"></span><h2>pyclimb.temp_merge_file module<a class="headerlink" href="#module-pyclimb.temp_merge_file" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.temp_merge_file.merge_data_dist">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.temp_merge_file.</span></span><span class="sig-name descname"><span class="pre">merge_data_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Latitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Longitude'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.temp_merge_file.merge_data_dist" title="Link to this definition">#</a></dt>
+<dd><p>df1: Left data frame that you want to join
+NOTE: this will perform a left join, meaning that all of the columns in df1 will
+be kept but not all of the columns in df2 will necessarily be kept</p>
+<p>df2: Right data frame that you want to join</p>
+<p>keep_col: name of the column from df2 that you want to join to df1</p>
+<p>lat and lon: the name of the latitude and longitude column for df2
+NOTE: This assumes that df1 has column names “Latitude” and “Longitude”
+respectively. Otherwise, the name of those columns must be the same names as
+df2 which is specified by the lat and lon arguements</p>
+</dd></dl>
+
+</section>
+<section id="module-pyclimb.vis_func">
+<span id="pyclimb-vis-func-module"></span><h2>pyclimb.vis_func module<a class="headerlink" href="#module-pyclimb.vis_func" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.vis_func.clus_map">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.vis_func.</span></span><span class="sig-name descname"><span class="pre">clus_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Latitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Longitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Description'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cluster_map'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.vis_func.clus_map" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyclimb">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyclimb" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="modules.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">pyclimb</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Riley Wilkinson and Hayden Crofts
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">pyclimb package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-pyclimb.clean_climbing">pyclimb.clean_climbing module</a><ul>
+<li><a class="reference internal" href="#pyclimb.clean_climbing.clean"><code class="docutils literal notranslate"><span class="pre">clean()</span></code></a></li>
+<li><a class="reference internal" href="#pyclimb.clean_climbing.concat"><code class="docutils literal notranslate"><span class="pre">concat()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyclimb.load_data">pyclimb.load_data module</a><ul>
+<li><a class="reference internal" href="#pyclimb.load_data.load_data"><code class="docutils literal notranslate"><span class="pre">load_data()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyclimb.scrape_climbing">pyclimb.scrape_climbing module</a><ul>
+<li><a class="reference internal" href="#pyclimb.scrape_climbing.findviews"><code class="docutils literal notranslate"><span class="pre">findviews()</span></code></a></li>
+<li><a class="reference internal" href="#pyclimb.scrape_climbing.findyear"><code class="docutils literal notranslate"><span class="pre">findyear()</span></code></a></li>
+<li><a class="reference internal" href="#pyclimb.scrape_climbing.scrape_mp"><code class="docutils literal notranslate"><span class="pre">scrape_mp()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyclimb.temp_merge_file">pyclimb.temp_merge_file module</a><ul>
+<li><a class="reference internal" href="#pyclimb.temp_merge_file.merge_data_dist"><code class="docutils literal notranslate"><span class="pre">merge_data_dist()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyclimb.vis_func">pyclimb.vis_func module</a><ul>
+<li><a class="reference internal" href="#pyclimb.vis_func.clus_map"><code class="docutils literal notranslate"><span class="pre">clus_map()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-pyclimb">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>
