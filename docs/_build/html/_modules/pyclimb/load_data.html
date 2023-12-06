@@ -1,13 +1,14 @@
 <!doctype html>
-<html class="no-js" lang="en" data-content_root="./">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 --><title>Index - pyclimb 0.0.1 documentation</title>
-<link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>pyclimb.load_data - pyclimb 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -121,7 +122,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">pyclimb 0.0.1 documentation</div></a>
+      <a href="../../index.html"><div class="brand">pyclimb 0.0.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -141,24 +142,24 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
   <span class="sidebar-brand-text">pyclimb 0.0.1 documentation</span>
   
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">PYCLIMB Docs Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">PYCLIMB Docs Homepage</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Intro to PYCLIMB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pyclimb.html">pyclimb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Intro to PYCLIMB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pyclimb.html">pyclimb package</a></li>
 </ul>
 
 </div>
@@ -192,140 +193,56 @@
           </label>
         </div>
         <article role="main">
-          
-<section class="genindex-section">
-  <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#C"><strong>C</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#S"><strong>S</strong></a></div>
-</section>
-<section id="C" class="genindex-section">
-  <h2>C</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="pyclimb.html#pyclimb.clean_climbing.clean">clean() (in module pyclimb.clean_climbing)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="pyclimb.html#pyclimb.vis_func.clus_map">clus_map() (in module pyclimb.vis_func)</a>
-</li>
-        <li><a href="pyclimb.html#pyclimb.clean_climbing.concat">concat() (in module pyclimb.clean_climbing)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
+          <h1>Source code for pyclimb.load_data</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pkg_resources</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pyclimb.clean_climbing</span> <span class="kn">import</span> <span class="n">concat</span>
 
-<section id="F" class="genindex-section">
-  <h2>F</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="pyclimb.html#pyclimb.scrape_climbing.findviews">findviews() (in module pyclimb.scrape_climbing)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="pyclimb.html#pyclimb.scrape_climbing.findyear">findyear() (in module pyclimb.scrape_climbing)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
+<div class="viewcode-block" id="load_data">
+<a class="viewcode-back" href="../../pyclimb.html#pyclimb.load_data.load_data">[docs]</a>
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;clean&quot;</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;This function loads in preloaded datasets</span>
 
-<section id="H" class="genindex-section">
-  <h2>H</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="pyclimb.html#pyclimb.vis_func.heat_map">heat_map() (in module pyclimb.vis_func)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    type : {&#39;clean&#39;, &#39;raw&#39;, &#39;weather&#39;}, default = &quot;clean&quot;</span>
+<span class="sd">        Options : </span>
+<span class="sd">            -&#39;clean&#39; : </span>
+<span class="sd">                this is a data set of all of the outdoor sport climbs in Utah from the </span>
+<span class="sd">                mountain project database as of October 2023 </span>
+<span class="sd">            -&#39;raw&#39; : </span>
+<span class="sd">                this is the files that the &#39;clean&#39; data came from, there are 8 different files the </span>
+<span class="sd">                default is to return a single data frame with all 8 files, but you can request  any one </span>
+<span class="sd">                of the files by specifying the argument which </span>
+<span class="sd">            -&#39;weather&#39; : </span>
+<span class="sd">                this is climate data taken from Utah Weather Stations</span>
 
-<section id="L" class="genindex-section">
-  <h2>L</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="pyclimb.html#pyclimb.load_data.load_data">load_data() (in module pyclimb.load_data)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
+<span class="sd">    which : list of ints (1-8)</span>
+<span class="sd">        This arguement specifies which of the data files you want if you select the &#39;raw&#39; option.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    pandas dataframe</span>
+<span class="sd">        the data set requested</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;clean&#39;</span><span class="p">:</span>
+        <span class="n">path_to_data</span> <span class="o">=</span> <span class="s2">&quot;data/utah_climbs.csv&quot;</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;weather&quot;</span><span class="p">:</span>
+        <span class="n">path_to_data</span> <span class="o">=</span> <span class="s2">&quot;data/Utah_Weather_Stations.csv&quot;</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;raw&#39;</span><span class="p">:</span>
+        <span class="n">str_num</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">which</span><span class="p">]</span>
+        <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data/route-finder_&#39;</span> <span class="o">+</span> <span class="n">num</span>  <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">str_num</span><span class="p">]</span>
+        <span class="n">actual_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span><span class="s2">&quot;pyclimb&quot;</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">concat</span><span class="p">(</span><span class="n">actual_path</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: please use a valid type &#39;clean&#39;, &#39;raw&#39;, or &#39;weather&#39;&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span><span class="s2">&quot;pyclimb&quot;</span><span class="p">,</span> <span class="n">path_to_data</span><span class="p">)</span>
 
-<section id="M" class="genindex-section">
-  <h2>M</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li>
-    module
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span></div>
 
-        <ul>
-          <li><a href="pyclimb.html#module-pyclimb">pyclimb</a>
-</li>
-          <li><a href="pyclimb.html#module-pyclimb.clean_climbing">pyclimb.clean_climbing</a>
-</li>
-          <li><a href="pyclimb.html#module-pyclimb.load_data">pyclimb.load_data</a>
-</li>
-          <li><a href="pyclimb.html#module-pyclimb.scrape_climbing">pyclimb.scrape_climbing</a>
-</li>
-          <li><a href="pyclimb.html#module-pyclimb.vis_func">pyclimb.vis_func</a>
-</li>
-        </ul></li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="P" class="genindex-section">
-  <h2>P</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li>
-    pyclimb
-
-        <ul>
-          <li><a href="pyclimb.html#module-pyclimb">module</a>
-</li>
-        </ul></li>
-        <li>
-    pyclimb.clean_climbing
-
-        <ul>
-          <li><a href="pyclimb.html#module-pyclimb.clean_climbing">module</a>
-</li>
-        </ul></li>
-        <li>
-    pyclimb.load_data
-
-        <ul>
-          <li><a href="pyclimb.html#module-pyclimb.load_data">module</a>
-</li>
-        </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li>
-    pyclimb.scrape_climbing
-
-        <ul>
-          <li><a href="pyclimb.html#module-pyclimb.scrape_climbing">module</a>
-</li>
-        </ul></li>
-        <li>
-    pyclimb.vis_func
-
-        <ul>
-          <li><a href="pyclimb.html#module-pyclimb.vis_func">module</a>
-</li>
-        </ul></li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="S" class="genindex-section">
-  <h2>S</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="pyclimb.html#pyclimb.scrape_climbing.scrape_mp">scrape_mp() (in module pyclimb.scrape_climbing)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-
+</pre></div>
         </article>
       </div>
       <footer>
@@ -357,9 +274,9 @@
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=d45e8c67"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+</div><script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>
