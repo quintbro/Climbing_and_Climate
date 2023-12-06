@@ -348,8 +348,32 @@ different columns namely ‘numVotes’, ‘numViews’, ‘Year’, ‘ViewsPer
 </dd></dl>
 
 </section>
-<section id="pyclimb-temp-merge-file-module">
-<h2>pyclimb.temp_merge_file module<a class="headerlink" href="#pyclimb-temp-merge-file-module" title="Link to this heading">#</a></h2>
+<section id="module-pyclimb.data_merge">
+<span id="pyclimb-data-merge-module"></span><h2>pyclimb.data_merge module<a class="headerlink" href="#module-pyclimb.data_merge" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.data_merge.merge_data_dist">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.data_merge.</span></span><span class="sig-name descname"><span class="pre">merge_data_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Latitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Longitude'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/data_merge.html#merge_data_dist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.data_merge.merge_data_dist" title="Link to this definition">#</a></dt>
+<dd><p>Function to merge a dataframe containing latitude and longitude with
+the climbing dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df1</strong> (<em>Pandas dataframe</em>) – Left dataframe that you want to join. All rows will be kept</p></li>
+<li><p><strong>df2</strong> (<em>Pandas dataframe</em>) – Right dataframe that you want to join. Not all of the rows in this dataframe will
+necessarily be joined with df1.</p></li>
+<li><p><strong>keep_col</strong> (<em>str</em>) – name of the column from df2 that you want to join to df1</p></li>
+<li><p><strong>lat</strong> (<em>str</em><em>, </em><em>default = &quot;Latitude&quot;</em>) – the name of the latitude column in df2</p></li>
+<li><p><strong>lon</strong> (<em>str</em><em>, </em><em>default = &quot;Longitude&quot;</em>) – The name of the longitude column in df2</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>1. this will perform a left join, meaning that all of the columns in df1 will
+be kept but not all of the columns in df2 will necessarily be kept</p>
+<p>2. This assumes that df1 has column names “Latitude” and “Longitude”. Otherwise, the name of those columns
+<em>must</em> be the same names as df2 which is specified by the lat and lon arguements</p>
+</dd></dl>
+
 </section>
 <section id="module-pyclimb.vis_func">
 <span id="pyclimb-vis-func-module"></span><h2>pyclimb.vis_func module<a class="headerlink" href="#module-pyclimb.vis_func" title="Link to this heading">#</a></h2>
@@ -487,7 +511,10 @@ the function will return the map as a folium map object</p></li>
 <li><a class="reference internal" href="#pyclimb.scrape_climbing.scrape_mp"><code class="docutils literal notranslate"><span class="pre">scrape_mp()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pyclimb-temp-merge-file-module">pyclimb.temp_merge_file module</a></li>
+<li><a class="reference internal" href="#module-pyclimb.data_merge">pyclimb.data_merge module</a><ul>
+<li><a class="reference internal" href="#pyclimb.data_merge.merge_data_dist"><code class="docutils literal notranslate"><span class="pre">merge_data_dist()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-pyclimb.vis_func">pyclimb.vis_func module</a><ul>
 <li><a class="reference internal" href="#pyclimb.vis_func.clus_map"><code class="docutils literal notranslate"><span class="pre">clus_map()</span></code></a></li>
 <li><a class="reference internal" href="#pyclimb.vis_func.heat_map"><code class="docutils literal notranslate"><span class="pre">heat_map()</span></code></a></li>
