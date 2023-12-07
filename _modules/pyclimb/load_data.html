@@ -1,15 +1,14 @@
 <!doctype html>
-<html class="no-js" lang="en" data-content_root="./">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="pyclimb package" href="pyclimb.html" /><link rel="prev" title="PYCLIMB Docs Homepage" href="index.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Intro to PYCLIMB - pyclimb 0.0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=362ab14a" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+        <title>pyclimb.load_data - pyclimb 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -123,7 +122,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">pyclimb 0.0.1 documentation</div></a>
+      <a href="../../index.html"><div class="brand">pyclimb 0.0.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -134,7 +133,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -143,24 +142,24 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
   
   
   <span class="sidebar-brand-text">pyclimb 0.0.1 documentation</span>
   
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">PYCLIMB Docs Homepage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">PYCLIMB Docs Homepage</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Intro to PYCLIMB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pyclimb.html">pyclimb package</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Intro to PYCLIMB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pyclimb.html">pyclimb package</a></li>
 </ul>
 
 </div>
@@ -180,8 +179,7 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          
-<div class="theme-toggle-container theme-toggle-content">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -189,71 +187,69 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="intro-to-pyclimb">
-<h1>Intro to PYCLIMB<a class="headerlink" href="#intro-to-pyclimb" title="Link to this heading">#</a></h1>
-<p>This package is used to clean and vizualize data that can be obtained from mountainproject.com.</p>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
-<p>Use the package manager <cite>pip</cite> to install pyclimb.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/quintbro/Climbing_and_Climate.git
-</pre></div>
-</div>
-<p>In order to obtain the .csv files that work with this package go to the <cite>mountain project route finder &lt;https://www.mountainproject.com/route-finder&gt;</cite> and filter to the desired routes that you want data on. then hit “export csv” which will download the .csv file that will work with all of the functions in this package.
-<strong>NOTE:</strong> the route finder will only export 1000 climbs at a time, so if you want export more climbs than that you will need to export multiple .csv files then use the dataConcat function to concatenate all of them into a single dataframe.</p>
-</section>
-<section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
-<p>Here is a demo of how to use the package:</p>
-<p>if you have multiple .csv files the dataConcat function found in the clean_climbing module will concatenate them together for you.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyclimb</span> <span class="k">as</span> <span class="nn">pc</span>
+          <h1>Source code for pyclimb.load_data</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pkg_resources</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pyclimb.clean_climbing</span> <span class="kn">import</span> <span class="n">concat</span>
 
-<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;route-finder_1.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;route-finder_2.csv&quot;</span><span class="p">]</span>
-<span class="n">climbs</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_of_files</span> <span class="o">=</span> <span class="n">files</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>You can then use the dataClean function from the clean_climbing module to clean the data for you.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pc</span><span class="o">.</span><span class="n">clean</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">climbs</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>You can also get additional data by using the scrape_mp function from the scrape_climbing module
-<strong>NOTE:</strong> the crawl delay required by mountain project is 60</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">scrape_mp</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">climbs</span><span class="p">,</span> <span class="n">crawl_delay</span> <span class="o">=</span> <span class="mi">60</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
+<div class="viewcode-block" id="load_data">
+<a class="viewcode-back" href="../../pyclimb.html#pyclimb.load_data.load_data">[docs]</a>
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;clean&quot;</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;This function loads in preloaded datasets</span>
 
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    type : {&#39;clean&#39;, &#39;raw&#39;, &#39;weather&#39;}, default = &quot;clean&quot;</span>
+<span class="sd">        Options : </span>
+<span class="sd">            -&#39;clean&#39; : </span>
+<span class="sd">                this is a data set of all of the outdoor sport climbs in Utah from the </span>
+<span class="sd">                mountain project database as of October 2023 </span>
+<span class="sd">            -&#39;raw&#39; : </span>
+<span class="sd">                this is the files that the &#39;clean&#39; data came from, there are 8 different files the </span>
+<span class="sd">                default is to return a single data frame with all 8 files, but you can request  any one </span>
+<span class="sd">                of the files by specifying the argument which </span>
+<span class="sd">            -&#39;weather&#39; : </span>
+<span class="sd">                this is climate data taken from Utah Weather Stations</span>
+
+<span class="sd">    which : list of ints (1-8)</span>
+<span class="sd">        This arguement specifies which of the data files you want if you select the &#39;raw&#39; option.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    pandas dataframe</span>
+<span class="sd">        the data set requested</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;clean&#39;</span><span class="p">:</span>
+        <span class="n">path_to_data</span> <span class="o">=</span> <span class="s2">&quot;data/utah_climbs.csv&quot;</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;weather&quot;</span><span class="p">:</span>
+        <span class="n">path_to_data</span> <span class="o">=</span> <span class="s2">&quot;data/Utah_Weather_Stations.csv&quot;</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;raw&#39;</span><span class="p">:</span>
+        <span class="n">str_num</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">which</span><span class="p">]</span>
+        <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data/route-finder_&#39;</span> <span class="o">+</span> <span class="n">num</span>  <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">str_num</span><span class="p">]</span>
+        <span class="n">actual_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span><span class="s2">&quot;pyclimb&quot;</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">concat</span><span class="p">(</span><span class="n">actual_path</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: please use a valid type &#39;clean&#39;, &#39;raw&#39;, or &#39;weather&#39;&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span><span class="s2">&quot;pyclimb&quot;</span><span class="p">,</span> <span class="n">path_to_data</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span></div>
+
+</pre></div>
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="pyclimb.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">pyclimb package</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="index.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Home</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -272,35 +268,15 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Intro to PYCLIMB</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#example">Example</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=d45e8c67"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+</div><script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>

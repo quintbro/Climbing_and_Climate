@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="pyclimb" href="modules.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Intro to PYCLIMB" href="README.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>pyclimb package - pyclimb 0.0.1 documentation</title>
@@ -160,10 +160,7 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="README.html">Intro to PYCLIMB</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">pyclimb</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of pyclimb</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">pyclimb package</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">pyclimb package</a></li>
 </ul>
 
 </div>
@@ -207,7 +204,7 @@
 <span id="pyclimb-clean-climbing-module"></span><h2>pyclimb.clean_climbing module<a class="headerlink" href="#module-pyclimb.clean_climbing" title="Link to this heading">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyclimb.clean_climbing.clean">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.clean_climbing.</span></span><span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.clean_climbing.clean" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyclimb.clean_climbing.</span></span><span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/clean_climbing.html#clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.clean_climbing.clean" title="Link to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -243,7 +240,7 @@ to np.NaN values</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyclimb.clean_climbing.concat">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.clean_climbing.</span></span><span class="sig-name descname"><span class="pre">concat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.clean_climbing.concat" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyclimb.clean_climbing.</span></span><span class="sig-name descname"><span class="pre">concat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/clean_climbing.html#concat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.clean_climbing.concat" title="Link to this definition">#</a></dt>
 <dd><p>This function takes a list of .csv files as an argument and returns a
 dataframe with the dataframes pulled from each file concatenated together
 vertically</p>
@@ -271,7 +268,7 @@ your environment.</p></li>
 <span id="pyclimb-load-data-module"></span><h2>pyclimb.load_data module<a class="headerlink" href="#module-pyclimb.load_data" title="Link to this heading">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyclimb.load_data.load_data">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.load_data.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'clean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">which</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.load_data.load_data" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyclimb.load_data.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'clean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">which</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/load_data.html#load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.load_data.load_data" title="Link to this definition">#</a></dt>
 <dd><p>This function loads in preloaded datasets</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -308,17 +305,17 @@ of the files by specifying the argument which</p>
 <span id="pyclimb-scrape-climbing-module"></span><h2>pyclimb.scrape_climbing module<a class="headerlink" href="#module-pyclimb.scrape_climbing" title="Link to this heading">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyclimb.scrape_climbing.findviews">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">findviews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.scrape_climbing.findviews" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">findviews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/scrape_climbing.html#findviews"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.scrape_climbing.findviews" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyclimb.scrape_climbing.findyear">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">findyear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.scrape_climbing.findyear" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">findyear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/scrape_climbing.html#findyear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.scrape_climbing.findyear" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyclimb.scrape_climbing.scrape_mp">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">scrape_mp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crawl_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.scrape_climbing.scrape_mp" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">scrape_mp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crawl_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/scrape_climbing.html#scrape_mp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.scrape_climbing.scrape_mp" title="Link to this definition">#</a></dt>
 <dd><p>Function to scrape data from mountainproject.com</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -351,11 +348,11 @@ different columns namely ‘numVotes’, ‘numViews’, ‘Year’, ‘ViewsPer
 </dd></dl>
 
 </section>
-<section id="module-pyclimb.temp_merge_file">
-<span id="pyclimb-temp-merge-file-module"></span><h2>pyclimb.temp_merge_file module<a class="headerlink" href="#module-pyclimb.temp_merge_file" title="Link to this heading">#</a></h2>
+<section id="module-pyclimb.data_merge">
+<span id="pyclimb-data-merge-module"></span><h2>pyclimb.data_merge module<a class="headerlink" href="#module-pyclimb.data_merge" title="Link to this heading">#</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="pyclimb.temp_merge_file.merge_data_dist">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.temp_merge_file.</span></span><span class="sig-name descname"><span class="pre">merge_data_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Latitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Longitude'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.temp_merge_file.merge_data_dist" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="pyclimb.data_merge.merge_data_dist">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.data_merge.</span></span><span class="sig-name descname"><span class="pre">merge_data_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Latitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Longitude'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/data_merge.html#merge_data_dist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.data_merge.merge_data_dist" title="Link to this definition">#</a></dt>
 <dd><p>Function to merge a dataframe containing latitude and longitude with
 the climbing dataframe</p>
 <dl class="field-list simple">
@@ -382,7 +379,7 @@ be kept but not all of the columns in df2 will necessarily be kept</p>
 <span id="pyclimb-vis-func-module"></span><h2>pyclimb.vis_func module<a class="headerlink" href="#module-pyclimb.vis_func" title="Link to this heading">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyclimb.vis_func.clus_map">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.vis_func.</span></span><span class="sig-name descname"><span class="pre">clus_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Latitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Longitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Description'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cluster_map'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyclimb.vis_func.clus_map" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyclimb.vis_func.</span></span><span class="sig-name descname"><span class="pre">clus_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Latitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Longitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Description'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cluster_map'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/vis_func.html#clus_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.vis_func.clus_map" title="Link to this definition">#</a></dt>
 <dd><p>Create an interactive map of climbs with the desired description/attribute</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -412,6 +409,38 @@ the function will return the map as a folium map object</p></li>
 </div>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pyclimb.vis_func.heat_map">
+<span class="sig-prename descclassname"><span class="pre">pyclimb.vis_func.</span></span><span class="sig-name descname"><span class="pre">heat_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Latitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Longitude'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Description'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'heat_map'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/vis_func.html#heat_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.vis_func.heat_map" title="Link to this definition">#</a></dt>
+<dd><p>Create a heat map of climbs with the desired description/attribute</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – The Dataframe must include a latitude and longitude column</p></li>
+<li><p><strong>lat</strong> (<em>str</em><em>, </em><em>default = &quot;Latitude&quot;</em>) – This is the name of the column in df that contains the latitude</p></li>
+<li><p><strong>lon</strong> (<em>str</em><em>, </em><em>default = &quot;Longitude&quot;</em>) – This is the name of the column in df that contains the longitude</p></li>
+<li><p><strong>desc</strong> (<em>str</em><em>, </em><em>default = &quot;Description&quot;</em>) – This is the name of the column in df that you want each point on the graph to display
+You can also think of this as an attribute</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>default = &quot;heat_map&quot;</em>) – This is the name of the html file that you want to write the map out to</p></li>
+<li><p><strong>save</strong> (<em>boolean</em><em>, </em><em>default = True</em>) – When set to True, it will write out the map to an html file, when set to False,
+the function will return the map as a folium map object</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>folium map object</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>By default the function will return nothing, if you set save = False, it will return a folium map object</p>
+<p class="rubric">Example</p>
+<p>This example uses the data that can be loaded using the load_data function and</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyclimb</span> <span class="k">as</span> <span class="nn">pc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyclimb.vis_func</span> <span class="kn">import</span> <span class="n">heat_map</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">heat_map</span><span class="p">(</span><span class="n">pc</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="s2">&quot;clean&quot;</span><span class="p">),</span> <span class="n">lat</span> <span class="o">=</span> <span class="s2">&quot;Area Latitude&quot;</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="s2">&quot;Area Longitude&quot;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;Route&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </section>
 <section id="module-pyclimb">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyclimb" title="Link to this heading">#</a></h2>
@@ -424,14 +453,14 @@ the function will return the map as a folium map object</p></li>
         
         <div class="related-pages">
           
-          <a class="prev-page" href="modules.html">
+          <a class="prev-page" href="README.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">pyclimb</div>
+                <div class="title">Intro to PYCLIMB</div>
                 
               </div>
             </a>
@@ -482,12 +511,13 @@ the function will return the map as a folium map object</p></li>
 <li><a class="reference internal" href="#pyclimb.scrape_climbing.scrape_mp"><code class="docutils literal notranslate"><span class="pre">scrape_mp()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-pyclimb.temp_merge_file">pyclimb.temp_merge_file module</a><ul>
-<li><a class="reference internal" href="#pyclimb.temp_merge_file.merge_data_dist"><code class="docutils literal notranslate"><span class="pre">merge_data_dist()</span></code></a></li>
+<li><a class="reference internal" href="#module-pyclimb.data_merge">pyclimb.data_merge module</a><ul>
+<li><a class="reference internal" href="#pyclimb.data_merge.merge_data_dist"><code class="docutils literal notranslate"><span class="pre">merge_data_dist()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-pyclimb.vis_func">pyclimb.vis_func module</a><ul>
 <li><a class="reference internal" href="#pyclimb.vis_func.clus_map"><code class="docutils literal notranslate"><span class="pre">clus_map()</span></code></a></li>
+<li><a class="reference internal" href="#pyclimb.vis_func.heat_map"><code class="docutils literal notranslate"><span class="pre">heat_map()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-pyclimb">Module contents</a></li>

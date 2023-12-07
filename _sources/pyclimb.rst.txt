@@ -28,10 +28,10 @@ pyclimb.scrape\_climbing module
    :undoc-members:
    :show-inheritance:
 
-pyclimb.temp\_merge\_file module
+pyclimb.data\_merge module
 --------------------------------
 
-.. automodule:: pyclimb.temp_merge_file
+.. automodule:: pyclimb.data_merge
    :members:
    :undoc-members:
    :show-inheritance:
