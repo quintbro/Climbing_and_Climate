@@ -9,15 +9,17 @@ def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
     ==========
     type : {'clean', 'raw', 'weather'}, default = "clean"
         Options : 
-            -'clean' : 
+            'clean' : 
                 this is a data set of all of the outdoor sport climbs in Utah from the 
                 mountain project database as of October 2023 
-            -'raw' : 
+            'raw' : 
                 this is the files that the 'clean' data came from, there are 8 different files the 
                 default is to return a single data frame with all 8 files, but you can request  any one 
                 of the files by specifying the argument which 
-            -'weather' : 
+            'weather' : 
                 this is climate data taken from Utah Weather Stations
+            'cities' : 
+                This is a list of Utah Cities by latitude and longitude
 
     which : list of ints (1-8)
         This arguement specifies which of the data files you want if you select the 'raw' option.
@@ -36,8 +38,10 @@ def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
         paths = ['data/route-finder_' + num  + '.csv' for num in str_num]
         actual_path = [pkg_resources.resource_filename("pyclimb", file) for file in paths]
         return concat(actual_path)
+    elif type == 'cities':
+        path_to_data = "data/utah_cities.csv"
     else:
-        print("ERROR: please use a valid type 'clean', 'raw', or 'weather'")
+        print("ERROR: please use a valid type 'clean', 'raw', 'weather', cities")
         return -1
     
     file_path = pkg_resources.resource_filename("pyclimb", path_to_data)
