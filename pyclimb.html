@@ -273,16 +273,18 @@ your environment.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>type</strong> (<em>{'clean'</em><em>, </em><em>'raw'</em><em>, </em><em>'weather'}</em><em>, </em><em>default = &quot;clean&quot;</em>) – <dl class="simple">
+<li><p><strong>type</strong> (<em>{'clean'</em><em>, </em><em>'raw'</em><em>, </em><em>'weather'</em><em>, </em><em>'cities'}</em><em>, </em><em>default = &quot;clean&quot;</em>) – <dl class="simple">
 <dt>Options :</dt><dd><dl class="simple">
-<dt>-‘clean’ :</dt><dd><p>this is a data set of all of the outdoor sport climbs in Utah from the
+<dt>’clean’ :</dt><dd><p>this is a data set of all of the outdoor sport climbs in Utah from the
 mountain project database as of October 2023</p>
 </dd>
-<dt>-‘raw’ :</dt><dd><p>this is the files that the ‘clean’ data came from, there are 8 different files the
+<dt>’raw’ :</dt><dd><p>this is the files that the ‘clean’ data came from, there are 8 different files the
 default is to return a single data frame with all 8 files, but you can request  any one
 of the files by specifying the argument which</p>
 </dd>
-<dt>-‘weather’ :</dt><dd><p>this is climate data taken from Utah Weather Stations</p>
+<dt>’weather’ :</dt><dd><p>this is climate data taken from Utah Weather Stations</p>
+</dd>
+<dt>’cities’ :</dt><dd><p>This is a list of Utah Cities by latitude and longitude</p>
 </dd>
 </dl>
 </dd>
@@ -303,16 +305,6 @@ of the files by specifying the argument which</p>
 </section>
 <section id="module-pyclimb.scrape_climbing">
 <span id="pyclimb-scrape-climbing-module"></span><h2>pyclimb.scrape_climbing module<a class="headerlink" href="#module-pyclimb.scrape_climbing" title="Link to this heading">#</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyclimb.scrape_climbing.findviews">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">findviews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/scrape_climbing.html#findviews"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.scrape_climbing.findviews" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyclimb.scrape_climbing.findyear">
-<span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">findyear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/scrape_climbing.html#findyear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.scrape_climbing.findyear" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <dl class="py function">
 <dt class="sig sig-object py" id="pyclimb.scrape_climbing.scrape_mp">
 <span class="sig-prename descclassname"><span class="pre">pyclimb.scrape_climbing.</span></span><span class="sig-name descname"><span class="pre">scrape_mp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crawl_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyclimb/scrape_climbing.html#scrape_mp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyclimb.scrape_climbing.scrape_mp" title="Link to this definition">#</a></dt>
@@ -506,8 +498,6 @@ the function will return the map as a folium map object</p></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-pyclimb.scrape_climbing">pyclimb.scrape_climbing module</a><ul>
-<li><a class="reference internal" href="#pyclimb.scrape_climbing.findviews"><code class="docutils literal notranslate"><span class="pre">findviews()</span></code></a></li>
-<li><a class="reference internal" href="#pyclimb.scrape_climbing.findyear"><code class="docutils literal notranslate"><span class="pre">findyear()</span></code></a></li>
 <li><a class="reference internal" href="#pyclimb.scrape_climbing.scrape_mp"><code class="docutils literal notranslate"><span class="pre">scrape_mp()</span></code></a></li>
 </ul>
 </li>
