@@ -25,6 +25,7 @@ pyclimb.scrape\_climbing module
 
 .. automodule:: pyclimb.scrape_climbing
    :members:
+   :exclude-members: findviews, findyear
    :undoc-members:
    :show-inheritance:
 
