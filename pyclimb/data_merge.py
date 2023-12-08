@@ -1,7 +1,7 @@
 import pandas as pd
 from scipy.spatial import cKDTree
 
-def merge_data_dist(df1, df2, keep_col, lat = 'Latitude', lon = 'Longitude'):
+def merge_data_dist(df1, df2, keep_col, lat1 = 'Latitude', lon1 = 'Longitude', lat2 = 'Latitude', lon2 = 'Longitude'):
     ''' Function to merge a dataframe containing latitude and longitude with 
     the climbing dataframe
     
@@ -17,10 +17,16 @@ def merge_data_dist(df1, df2, keep_col, lat = 'Latitude', lon = 'Longitude'):
     keep_col : str
         name of the column from df2 that you want to join to df1
 
-    lat : str, default = "Latitude"
+    lat1 : str, default = "Latitude"
+        the name of the latitude column in df1
+    
+    lon1 : str, default = "Longitude"
+        The name of the longitude column in df1
+    
+    lat2 : str, default = "Latitude"
         the name of the latitude column in df2
     
-    lon : str, default = "Longitude"
+    lon2 : str, default = "Longitude"
         The name of the longitude column in df2
     
     Notes
@@ -32,8 +38,8 @@ def merge_data_dist(df1, df2, keep_col, lat = 'Latitude', lon = 'Longitude'):
     *must* be the same names as df2 which is specified by the lat and lon arguements
     '''
     # Rename the df to correct column names
-    df1 = df1.rename(columns={lat: 'Latitude', lon: 'Longitude'})
-    df2 = df2.rename(columns={lat: 'Latitude', lon: 'Longitude'})
+    df1 = df1.rename(columns={lat1: 'Latitude', lon1: 'Longitude'})
+    df2 = df2.rename(columns={lat2: 'Latitude', lon2: 'Longitude'})
     
     # Create KDTree for df2
     tree = cKDTree(df2[['Latitude', 'Longitude']])
