@@ -132,4 +132,5 @@ def clean(df, inplace = False):
     # convert any climbs that had a rating of -1 to NaN values
     climbs['Avg Stars'].mask(climbs['Avg Stars'] == -1, np.nan, inplace = True)
 
-    return climbs
+    if inplace == False:
+        return climbs
