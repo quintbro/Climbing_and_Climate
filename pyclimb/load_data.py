@@ -7,7 +7,7 @@ def load_data(type = "clean", which = [1,2,3,4,5,6,7,8]):
 
     Parameters
     ==========
-    type : {'clean', 'raw', 'weather'}, default = "clean"
+    type : {'clean', 'raw', 'weather', 'cities'}, default = "clean"
         Options : 
             'clean' : 
                 this is a data set of all of the outdoor sport climbs in Utah from the 
