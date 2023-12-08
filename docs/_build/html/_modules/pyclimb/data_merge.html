@@ -199,7 +199,7 @@
 
 <div class="viewcode-block" id="merge_data_dist">
 <a class="viewcode-back" href="../../pyclimb.html#pyclimb.data_merge.merge_data_dist">[docs]</a>
-<span class="k">def</span> <span class="nf">merge_data_dist</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">keep_col</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">merge_data_dist</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">keep_col</span><span class="p">,</span> <span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Function to merge a dataframe containing latitude and longitude with </span>
 <span class="sd">    the climbing dataframe</span>
 <span class="sd">    </span>
@@ -215,10 +215,16 @@
 <span class="sd">    keep_col : str</span>
 <span class="sd">        name of the column from df2 that you want to join to df1</span>
 
-<span class="sd">    lat : str, default = &quot;Latitude&quot;</span>
+<span class="sd">    lat1 : str, default = &quot;Latitude&quot;</span>
+<span class="sd">        the name of the latitude column in df1</span>
+<span class="sd">    </span>
+<span class="sd">    lon1 : str, default = &quot;Longitude&quot;</span>
+<span class="sd">        The name of the longitude column in df1</span>
+<span class="sd">    </span>
+<span class="sd">    lat2 : str, default = &quot;Latitude&quot;</span>
 <span class="sd">        the name of the latitude column in df2</span>
 <span class="sd">    </span>
-<span class="sd">    lon : str, default = &quot;Longitude&quot;</span>
+<span class="sd">    lon2 : str, default = &quot;Longitude&quot;</span>
 <span class="sd">        The name of the longitude column in df2</span>
 <span class="sd">    </span>
 <span class="sd">    Notes</span>
@@ -230,8 +236,8 @@
 <span class="sd">    *must* be the same names as df2 which is specified by the lat and lon arguements</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="c1"># Rename the df to correct column names</span>
-    <span class="n">df1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">lat</span><span class="p">:</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">lon</span><span class="p">:</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">})</span>
-    <span class="n">df2</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">lat</span><span class="p">:</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">lon</span><span class="p">:</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">})</span>
+    <span class="n">df1</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">lat1</span><span class="p">:</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">lon1</span><span class="p">:</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">})</span>
+    <span class="n">df2</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">lat2</span><span class="p">:</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">lon2</span><span class="p">:</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">})</span>
     
     <span class="c1"># Create KDTree for df2</span>
     <span class="n">tree</span> <span class="o">=</span> <span class="n">cKDTree</span><span class="p">(</span><span class="n">df2</span><span class="p">[[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">]])</span>
