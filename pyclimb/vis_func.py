@@ -118,6 +118,6 @@ def heat_map (df, lat = 'Latitude', lon = 'Longitude', desc = 'Description', nam
     
     # Save the map as an HTML file
     if save:
-        map.save(f'{name}.html')
+        heat_map.save(f'{name}.html')
     else:
-        return map
+        return heat_map
