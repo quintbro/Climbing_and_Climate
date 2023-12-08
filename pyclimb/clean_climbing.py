@@ -101,7 +101,8 @@ def clean(df, inplace = False):
     climbs.drop(["Location"], axis=1, inplace=True)
     climbs[["State", "Region", "Location", "Crag", "Wall"]] = locs.drop([0, 1, 2, 3, 4], axis=1).replace("", np.NaN)
     climbs.drop(["Your Stars"], axis=1, inplace=True)
-    climbs.drop(["index"], axis = 1, inplace = True)
+    if "index" in climbs.columns:
+        climbs.drop(["index"], axis = 1, inplace = True)
 
     # This data set contains only climbs marked as 'Sport' but some climbs were marked as Sport/Trad, Sport/TR, etc. or even
     # Sport/Trad/TR and so this makes a new variable as a boolean, true for if the type contained the column name in addition to sport
