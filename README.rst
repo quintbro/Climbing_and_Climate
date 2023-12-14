@@ -15,13 +15,13 @@ Use the package manager `pip` to install pyclimb.
     pip install git+https://github.com/quintbro/Climbing_and_Climate.git
 
 In order to obtain the .csv files that work with this package go to the `mountain project route finder <https://www.mountainproject.com/route-finder>`_ and filter to the desired routes that you want data on. then hit "export csv" which will download the .csv file that will work with all of the functions in this package. 
-**NOTE:** the route finder will only export 1000 climbs at a time, so if you want export more climbs than that you will need to export multiple .csv files then use the dataConcat function to concatenate all of them into a single dataframe.
+**NOTE:** the route finder will only export 1000 climbs at a time, so if you want export more climbs than that you will need to export multiple .csv files then use the concat function to concatenate all of them into a single dataframe.
 
 Example
 -------
 Here is a demo of how to use the package:
 
-if you have multiple .csv files the dataConcat function found in the clean_climbing module will concatenate them together for you.
+if you have multiple .csv files the concat function found in the clean_climbing module will concatenate them together for you.
 
 .. code-block:: python
 
@@ -30,7 +30,7 @@ if you have multiple .csv files the dataConcat function found in the clean_climb
     files = ["route-finder_1.csv", "route-finder_2.csv"]
     climbs = pc.concat(list_of_files = files)
 
-You can then use the dataClean function from the clean_climbing module to clean the data for you.
+You can then use the clean function from the clean_climbing module to clean the data for you.
 
 .. code-block:: python
 
