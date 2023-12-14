@@ -32,7 +32,7 @@ You can then use the pyclimb.clean function from the clean_climbing module to cl
 
     pc.clean(df = climbs, inplace = True)
 
-You can also get additional data by using the scrape_mp function from the pyclimb.scrape_mp module
+You can also get additional data by using the scrape_mp function from the scrape_climbing module
 **NOTE:** the crawl delay required by mountain project is 60
 
 .. code-block:: python
