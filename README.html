@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="pyclimb package" href="pyclimb.html" /><link rel="prev" title="PYCLIMB Docs Homepage" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Demo" href="demo.html" /><link rel="prev" title="PYCLIMB Docs Homepage" href="index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Intro to PYCLIMB - pyclimb 0.0.1 documentation</title>
@@ -160,6 +160,7 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Intro to PYCLIMB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyclimb.html">pyclimb package</a></li>
 </ul>
 
@@ -205,19 +206,19 @@
 </pre></div>
 </div>
 <p>In order to obtain the .csv files that work with this package go to the <cite>mountain project route finder &lt;https://www.mountainproject.com/route-finder&gt;</cite> and filter to the desired routes that you want data on. then hit “export csv” which will download the .csv file that will work with all of the functions in this package.
-<strong>NOTE:</strong> the route finder will only export 1000 climbs at a time, so if you want export more climbs than that you will need to export multiple .csv files then use the dataConcat function to concatenate all of them into a single dataframe.</p>
+<strong>NOTE:</strong> the route finder will only export 1000 climbs at a time, so if you want export more climbs than that you will need to export multiple .csv files then use the pyclimb.concat() function to concatenate all of them into a single dataframe.</p>
 </section>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
-<p>Here is a demo of how to use the package:</p>
-<p>if you have multiple .csv files the dataConcat function found in the clean_climbing module will concatenate them together for you.</p>
+<p>Here is a short example of how to use the package, for a more detailed example, please see “Demo”.</p>
+<p>if you have multiple .csv files the pyclimb.concat function found in the clean_climbing module will concatenate them together for you.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyclimb</span> <span class="k">as</span> <span class="nn">pc</span>
 
 <span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;route-finder_1.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;route-finder_2.csv&quot;</span><span class="p">]</span>
 <span class="n">climbs</span> <span class="o">=</span> <span class="n">pc</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_of_files</span> <span class="o">=</span> <span class="n">files</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can then use the dataClean function from the clean_climbing module to clean the data for you.</p>
+<p>You can then use the pyclimb.clean function from the clean_climbing module to clean the data for you.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pc</span><span class="o">.</span><span class="n">clean</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="n">climbs</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -234,12 +235,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="pyclimb.html">
+          <a class="next-page" href="demo.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">pyclimb package</div>
+                <div class="title">Demo</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
