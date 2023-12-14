@@ -18,6 +18,7 @@ PYCLIMB Docs Homepage
    :caption: Contents:
 
    README
+   demo
    pyclimb
 
 
