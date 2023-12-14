@@ -319,7 +319,7 @@ memory usage: 1.3+ MB
 </section>
 <section id="analysis">
 <h2>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h2>
-<p>Here we use scikit-learn to perform a weighted linear regression and analyze the data.</p>
+<p>Here we use scikit-learn to create a random forest model and predict the Rating_num.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change Elevation to a float</span>
 <span class="n">climbing</span><span class="p">[</span><span class="s1">&#39;ELEVATION&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">climbing</span><span class="o">.</span><span class="n">ELEVATION</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">climbing</span><span class="p">[</span><span class="s1">&#39;ELEVATION&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 

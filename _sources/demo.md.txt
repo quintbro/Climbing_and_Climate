@@ -128,7 +128,7 @@ heat_map(climbing, desc = 'Avg Stars')
 ```
 
 ## Analysis
-Here we use scikit-learn to perform a weighted linear regression and analyze the data.
+Here we use scikit-learn to create a random forest model and predict the Rating_num.
 
 
 ```python
