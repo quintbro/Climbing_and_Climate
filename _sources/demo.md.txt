@@ -22,8 +22,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from category_encoders import TargetEncoder
-from sklearn.ensemble import RandomForestRegressor # For the weighted linear regression
-import seaborn as sns
+from sklearn.ensemble import RandomForestRegressor
 ```
 
 ## Loading and Cleaning
