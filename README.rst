@@ -42,3 +42,5 @@ You can also get additional data by using the scrape_mp function from the scrape
 .. code-block:: python
 
     new_data = pc.scrape_mp(df = climbs, crawl_delay = 60)
+
+The additional data used in the demo.ipynb was collected from UtahWeatherStations.gov and mapsofworld.com
